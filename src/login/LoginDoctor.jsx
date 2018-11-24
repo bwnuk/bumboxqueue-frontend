@@ -27,8 +27,6 @@ export default class LoginDoctor extends Component {
           />
           <button id="submitDoctor" className="btn btn-lg btn-warning btn-block mt-2" type="submit">Sign in</button>
           <div className="text-dark">
-
-
 Don&apos;t have and account?&nbsp;
             <Link to="/register" className="badge badge-pill badge-info">Sign up</Link>
           </div>
