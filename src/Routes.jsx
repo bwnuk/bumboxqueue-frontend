@@ -7,6 +7,7 @@ import Home from './container/home/Home';
 import Login from './login/Login';
 import Welcome from './welcome/Welcome';
 import Profile from './profile/Profile';
+import Register from './register/Register';
 
 export default class Routes extends Component {
   constructor() {
@@ -32,7 +33,7 @@ export default class Routes extends Component {
           <Route path="/home" component={Home} />
           <Route path="/profile" component={Profile} />
           <Route path="/login" component={Login} />
-          <Route path="/register" component={Home} />
+          <Route path="/register" component={Register} />
         </div>
       </BrowserRouter>
     );
