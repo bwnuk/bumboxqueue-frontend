@@ -15,7 +15,7 @@ export default class Navigation extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
           <NavLink className="navbar-brand" exact to="/">Bumbox Queue</NavLink>
           <button
             className="navbar-toggler"
