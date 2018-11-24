@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import './Home.scss';
+import './Login.scss';
 
-export default class Home extends Component {
+export default class Login extends Component {
   render() {
     return (
       <div className="row" />
