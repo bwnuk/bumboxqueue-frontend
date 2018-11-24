@@ -35,7 +35,7 @@ export default class Navigation extends Component {
             </ul>
             <div className="form-inline mt-3 mt-sm-0 row d-flex justify-content-center">
               <NavLink className="nav-link btn btn btn-outline-warning m-1" exact to="./login">Log in</NavLink>
-              <NavLink className="nav-link btn btn btn-outline-warning m-1" exact to="./register">Sing up</NavLink>
+              <NavLink className="nav-link btn btn btn-outline-warning m-1" exact to="./register">Sign up</NavLink>
             </div>
           </div>
         </nav>
