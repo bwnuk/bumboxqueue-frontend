@@ -11,6 +11,6 @@ module.exports = merge(common, {
     },
     historyApiFallback: true,
     contentBase: __dirname,
-    port: 4001
+    port: 4002
   }
 });
