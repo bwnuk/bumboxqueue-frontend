@@ -1,11 +1,4 @@
 import React, { Component } from 'react';
-import {
-  HelpBlock,
-  FormGroup,
-  FormControl,
-  Button,
-  ControlLabel
-} from 'react-bootstrap';
 import RegisterDoctor from './RegisterDoctor';
 import RegisterPatient from './RegisterPatient';
 
