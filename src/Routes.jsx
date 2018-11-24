@@ -4,6 +4,9 @@ import { Redirect } from 'react-router';
 
 import Navbar from './container/navbar/Navbar';
 import Home from './container/home/Home';
+import Login from './login/Login';
+import Welcome from './welcome/Welcome';
+import Profile from './profile/Profile';
 
 export default class Routes extends Component {
   constructor() {
@@ -23,10 +26,14 @@ export default class Routes extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Navbar isLogged={this.state.isLogged} Path={this.state.whatPath} setPath={this.setPath} />
-        {/* <Switch>
-          <Route path="/" component={Home} exact />
-        </Switch> */}
+        <div>
+          <Navbar isLogged={this.state.isLogged} Path={this.state.whatPath} setPath={this.setPath} />
+          <Route path="/" component={Welcome} exact />
+          <Route path="/home" component={Home} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Home} />
+        </div>
       </BrowserRouter>
     );
   }
