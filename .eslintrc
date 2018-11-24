@@ -11,6 +11,7 @@
 		"SERVER_URL": true
 	},
 	"rules": {
+		"linebreak-style": 0,
 		"eol-last": [
 			"error",
 			"never"
