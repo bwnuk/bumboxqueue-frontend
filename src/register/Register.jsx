@@ -24,7 +24,7 @@ export default class Register extends Component {
       <div className="container">
         <div className="text-center row">
           <RegisterPatient />
-          <RegisterDoctor />
+          {/* <RegisterDoctor /> */}
         </div>
       </div>
     );
