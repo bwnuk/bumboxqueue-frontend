@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import UserApi from '../api/UserApi';
 
 import './Register.scss';
+import SessionController from '../controller/SessionController';
 
 export default class RegisterPatient extends Component {
   constructor(props) {
@@ -48,15 +49,22 @@ export default class RegisterPatient extends Component {
     const userInputDto = this.createUserInputDto();
     UserApi.registration(this.state.username, this.state.password, userInputDto)
       .then((res) => {
-        console.log(res.data);
+        if (res.status === 201) {
+          SessionController.setSession(res.data, this.state.username);
+          this.setState({
+            redirect: true
+          });
+          // this.props.updateStateIsLogged();
+        }
+      })
+      .catch((error) => {
+        alert(error);
       });
   }
 
   render() {
-    console.log(this.state.username);
-    console.log(this.state.password);
     return (
-      <div className="col-12 col-md-6 mt-5">
+      <div className="col mt-5">
         <form className="form-signin" onSubmit={this.handleOnSubmit}>
           <h1 className="h1 font-weight-normal text-primary">Register as a patient</h1>
 

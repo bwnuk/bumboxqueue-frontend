@@ -8,6 +8,7 @@ import Login from './login/Login';
 import Welcome from './welcome/Welcome';
 import Profile from './profile/Profile';
 import Register from './register/Register';
+import SessionController from './controller/SessionController';
 
 export default class Routes extends Component {
   constructor() {
@@ -18,9 +19,13 @@ export default class Routes extends Component {
     };
   }
 
-  setPath = (arg) => {
+  componentDidMount() {
+    this.updateStateIsLogged();
+  }
+
+  updateStateIsLogged = () => {
     this.setState({
-      Path: arg
+      isLogged: SessionController.isLogged()
     });
   }
 
