@@ -1,7 +1,7 @@
 import axios from 'axios';
 import SessionController from '../controller/SessionController';
 
-const url = 'http://localhost:8013/api/users';
+const url = '/api/users';
 
 export default {
   registration(username, password, PatientInputDto) {
@@ -10,14 +10,8 @@ export default {
     params.append('username', username);
     params.append('password', password);
     const config = {
-      method: 'POST',
-      url: url + '/registation',
-      headers: {
-        'Access-Control-Allow-Credentials': 'true',
-        'Access-Control-Allow-Methods': 'POST',
-        'Access-Control-Allow-Origin': 'origin',
-        'Content-Type': 'text/plain'
-      },
+      method: 'post',
+      url: url + '/registration',
       params,
       data: PatientInputDto
     };
