@@ -29,11 +29,13 @@ export default class Routes extends Component {
       <BrowserRouter>
         <div>
           <Navbar isLogged={this.state.isLogged} Path={this.state.whatPath} setPath={this.setPath} />
-          <Route path="/" component={Welcome} exact />
-          <Route path="/home" component={Home} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
+          <Switch>
+            <Route path="/" component={Welcome} exact />
+            <Route path="/home" component={Home} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+          </Switch>
         </div>
       </BrowserRouter>
     );
